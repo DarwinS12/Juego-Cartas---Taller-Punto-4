@@ -1,5 +1,5 @@
-import java.util.Random;
 
+import java.util.Random;
 import javax.swing.JPanel;
 
 public class Jugador {
@@ -63,6 +63,49 @@ public class Jugador {
         }
 
         return resultado;
+    }
+
+    public String getEscalerasMismaPinta() {
+        boolean[][] cartasPorPinta = new boolean[4][13];
+        for (Carta carta : cartas) {
+            cartasPorPinta[carta.getPinta().ordinal()][carta.getNombre().ordinal()] = true;
+        }
+
+        StringBuilder resultado = new StringBuilder();
+
+        for (int pinta = 0; pinta < 4; pinta++) {
+            int inicioEscaleraFinal = -1, largoEscaleraFinal = 0;
+            int inicioEscaleraActual = -1, tamañoEscaleraActual = 0;
+
+            for (int r = 0; r <= 13; r++) {
+                boolean cartaPresente = (r < 13) ? cartasPorPinta[pinta][r] : cartasPorPinta[pinta][0];
+
+                if (cartaPresente) {
+                    inicioEscaleraActual = (tamañoEscaleraActual == 0) ? r : inicioEscaleraActual;
+                    tamañoEscaleraActual++;
+                } else {
+                    if (tamañoEscaleraActual > largoEscaleraFinal) {
+                        largoEscaleraFinal = tamañoEscaleraActual;
+                        inicioEscaleraFinal = inicioEscaleraActual;
+                    }
+                    tamañoEscaleraActual = 0;
+                }
+            }
+
+            if (largoEscaleraFinal >= 3) {
+                resultado.append(Grupo.values()[largoEscaleraFinal])
+                        .append(" de ").append(Pinta.values()[pinta]).append(": ");
+                for (int i = 0; i < largoEscaleraFinal; i++) {
+                    int idx = (inicioEscaleraFinal + i) % 13;
+                    resultado.append(i > 0 ? ", " : "").append(NombreCarta.values()[idx]);
+                }
+                resultado.append("\n");
+            }
+        }
+
+        return resultado.length() == 0
+                ? "No se encontraron escaleras de la misma pinta"
+                : resultado.toString();
     }
 
 }

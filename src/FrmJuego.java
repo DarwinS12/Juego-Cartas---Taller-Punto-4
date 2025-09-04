@@ -81,14 +81,9 @@ public class FrmJuego extends JFrame {
     }
 
     private void verificar() {
-        switch (tpJugadores.getSelectedIndex()) {
-            case 0:
-                JOptionPane.showMessageDialog(null, jugador1.getGrupos());
-                break;
-            case 1:
-                JOptionPane.showMessageDialog(null, jugador2.getGrupos());
-                break;
-        }
+        Jugador j = (tpJugadores.getSelectedIndex() == 0) ? jugador1 : jugador2;
+        String msg = j.getGrupos() + "\n\n" + j.getEscalerasMismaPinta();
+        JOptionPane.showMessageDialog(null, msg);
     }
 
 }
