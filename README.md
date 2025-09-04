@@ -1,18 +1,12 @@
-## Getting Started
+# 📖 Descripción
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este repositorio corresponde al **punto 4 del taller**, el cual consiste en el desarrollo de un **juego de cartas implementado en Java**.
 
-## Folder Structure
+# 📚 Información académica
 
-The workspace contains two folders by default, where:
+**Materia:** Técnicas de Programación y Laboratorio G3 (2025-2)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+# 👥 Integrantes
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Mauro Ortega  
+- Darwin Salazar García  
