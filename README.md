@@ -1,9 +1,12 @@
-#📖 Descripción
-Este repositorio corresponde al punto 4 del taller, el cual consiste en el desarrollo de un juego de cartas implementado en Java
+# 📖 Descripción
 
-#📚 Información académica
-Técnicas de programación y laboratorio G3 (2025-2)
+Este repositorio corresponde al **punto 4 del taller**, el cual consiste en el desarrollo de un **juego de cartas implementado en Java**.
 
-#👥 Integrantes
-Mauro Ortega
-Darwin Salazar Garcia
+# 📚 Información académica
+
+**Materia:** Técnicas de Programación y Laboratorio G3 (2025-2)
+
+# 👥 Integrantes
+
+- Mauro Ortega  
+- Darwin Salazar García  
