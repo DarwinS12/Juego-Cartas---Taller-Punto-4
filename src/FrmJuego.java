@@ -31,6 +31,10 @@ public class FrmJuego extends JFrame {
         btnVerificar.setBounds(120, 10, 100, 25);
         getContentPane().add(btnVerificar);
 
+        JButton btnPuntaje = new JButton("Puntaje");
+        btnPuntaje.setBounds(230, 10, 100, 25);
+        getContentPane().add(btnPuntaje); //Aqui agregamos el boton puntaje
+
         pnlJugador1 = new JPanel();
         pnlJugador1.setLayout(null);
         pnlJugador1.setBackground(new Color(150, 255, 50));
@@ -64,6 +68,15 @@ public class FrmJuego extends JFrame {
             }
 
         });
+        btnPuntaje.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               btnPuntajeClick(e); //evento del boton puntaje
+            }
+        });
+
+
+
 
         jugador1 = new Jugador();
         jugador2 = new Jugador();
@@ -92,7 +105,8 @@ public class FrmJuego extends JFrame {
                 break;
             case 1:
                 JOptionPane.showMessageDialog(null, jugador2.Puntaje());
-                break;
+                break;  //accion del boton puntaje 
         }
     }
 }
+
