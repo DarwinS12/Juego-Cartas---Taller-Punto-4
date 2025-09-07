@@ -85,5 +85,14 @@ public class FrmJuego extends JFrame {
         String msg = j.getGrupos() + "\n\n" + j.getEscalerasMismaPinta();
         JOptionPane.showMessageDialog(null, msg);
     }
-
+    private void btnPuntajeClick(ActionEvent evt3) {
+        switch (tpJugadores.getSelectedIndex()) {
+            case 0:
+                JOptionPane.showMessageDialog(null, jugador1.Puntaje());
+                break;
+            case 1:
+                JOptionPane.showMessageDialog(null, jugador2.Puntaje());
+                break;
+        }
+    }
 }
