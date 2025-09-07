@@ -47,5 +47,7 @@ public class Carta {
         
         return NombreCarta.values()[posicion];
     }
-
+    public int getIndice() {
+        return indice;
+    }
 }
